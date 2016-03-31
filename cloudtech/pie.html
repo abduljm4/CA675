@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Pie Chart</title>
+		<script src="Chart.js"></script>
+	</head>
+	<body>
+		<div id="canvas-holder">
+			<canvas id="chart-area" width="200" height="200"/>
+		</div>
+
+
+	<script>
+
+		var pieData = [
+				{
+					value: 1394,
+					color:"#0000FF",
+					highlight: "#2e5cff",
+					label: "2003"
+				},
+				{
+					value: 4869,
+					color: "#ffe700",
+					highlight: "#ffef55",
+					label: "2004"
+				},
+				{
+					value: 7266,
+					color: "#09ff00",
+					highlight: "#35ff2e",
+					label: "2005"
+				},
+				{
+					value: 7676,
+					color: "#ff00e7",
+					highlight: "#ff62f0",
+					label: "2006"
+				},
+				{
+					value: 6694,
+					color: "#00f6f0",
+					highlight: "#6efffb",
+					label: "2007"
+				},
+				{
+					value: 6786,
+					color:"#F7464A",
+					highlight: "#FF5A5E",
+					label: "2008"
+				},
+				{
+					value: 5010,
+					color: "#46BFBD",
+					highlight: "#5AD3D1",
+					label: "2009"
+				},
+				{
+					value: 4067,
+					color: "#FDB45C",
+					highlight: "#FFC870",
+					label: "2010"
+				},
+				{
+					value: 2935,
+					color: "#949FB1",
+					highlight: "#A8B3C5",
+					label: "2011"
+				},
+				{
+					value: 1962,
+					color: "#4D5360",
+					highlight: "#616774",
+					label: "2012"
+				}
+
+			];
+
+			window.onload = function(){
+				var ctx = document.getElementById("chart-area").getContext("2d");
+				window.myPie = new Chart(ctx).Pie(pieData);
+			};
+
+
+
+	</script>
+	</body>
+</html>
